@@ -33,6 +33,11 @@
     <Reference Include="nunit.framework">
       <Private>False</Private>
     </Reference>
+    <Reference Include="FluentAssertions">
+      <HintPath>..\packages\fluentassertions.2.2.0\net45\FluentAssertions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -46,5 +51,12 @@
     <Compile Include="Categories\RandomContactTests.cs" />
     <Compile Include="Categories\RandomNetTests.cs" />
     <Compile Include="Categories\RandomLocationTests.cs" />
+    <Compile Include="Categories\RandomBooleanTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RandomData\RandomData.csproj">
+      <Project>{B08D7061-DDBE-4304-AB8B-ECAD29632865}</Project>
+      <Name>RandomData</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

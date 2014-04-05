@@ -4,12 +4,8 @@ using System;
 namespace RandomData.Tests
 {
 	[TestFixture()]
-	public class NameTests
+	public class RandomNameTests
 	{
-		[Test()]
-		public void TestCase ()
-		{
-		}
 	}
 }
 

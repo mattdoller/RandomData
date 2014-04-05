@@ -43,6 +43,7 @@
     <Compile Include="Categories\RandomContact.cs" />
     <Compile Include="Categories\RandomLocation.cs" />
     <Compile Include="Categories\RandomText.cs" />
+    <Compile Include="Categories\RandomBoolean.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

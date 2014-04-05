@@ -9,13 +9,19 @@ namespace RandomData
 			get; set;
 		}
 
-		protected RandomCategoryBase() : this(new Random().Next())
-		{
-		}
-
 		protected RandomCategoryBase(int seed)
 		{
 			Seed = seed;
+		}
+
+		protected RandomCategoryBase()
+			: this(new Random().Next())
+		{
+		}
+
+		protected Random NewRandom()
+		{
+			return new Random(Seed);
 		}
 	}
 }
