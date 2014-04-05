@@ -4,19 +4,15 @@ namespace RandomData
 {
 	public class RandomDate : RandomCategoryBase
 	{
+		public RandomDate(int seed)
+			: base(seed)
+		{
+		}
+
 		public DateTime DateBetween(DateTime lower, DateTime upper)
 		{
-			throw new NotImplementedException();
-		}
-
-		public DateTime DateAfter(DateTime lower)
-		{
-			throw new NotImplementedException();
-		}
-
-		public DateTime DateBefore(DateTime upper)
-		{
-			throw new NotImplementedException();
+			var days = (upper - lower).Days;
+			return lower.AddDays(NewRandom().NextDouble() * days);
 		}
 	}
 }
