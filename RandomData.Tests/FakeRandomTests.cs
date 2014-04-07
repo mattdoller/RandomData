@@ -72,5 +72,23 @@ namespace RandomData.Tests
 			random.Next(10, 100).Should().Be(11);
 			random.Next(10, 100).Should().Be(12);
 		}
+
+		[Test]
+		public void Test_Constructor_Seed_Changes_Results()
+		{
+			random = new FakeRandom(5);
+			random.Next().Should().Be(13);
+			random.Next().Should().Be(21);
+			random.Next().Should().Be(34);
+			random.Next().Should().Be(55);
+			random.Next().Should().Be(89);
+			random.Next().Should().Be(144);
+			random.Next().Should().Be(233);
+			random.Next().Should().Be(1);
+			random.Next().Should().Be(2);
+			random.Next().Should().Be(3);
+			random.Next().Should().Be(5);
+			random.Next().Should().Be(8);
+		}
 	}
 }

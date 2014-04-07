@@ -8,14 +8,14 @@ namespace RandomData.Tests
 
 		private const int GREATER_THAN_MAX = 234;
 
-		private int CurrentIndex
+		private int Seed
 		{
 			get; set;
 		}
 
-		public FakeRandom()
+		public FakeRandom(int seed = 0)
 		{
-			CurrentIndex = 0;
+			Seed = seed % Values.Length;
 		}
 
 		public int Next()
@@ -35,11 +35,11 @@ namespace RandomData.Tests
 
 		private int NextValue()
 		{
-			if (CurrentIndex >= Values.Length)
+			if (Seed >= Values.Length)
 			{
-				CurrentIndex = 0;
+				Seed = 0;
 			}
-			return Values[CurrentIndex++];
+			return Values[Seed++];
 		}
 	}
 }
