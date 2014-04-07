@@ -4,6 +4,8 @@ namespace RandomData
 {
 	public abstract class RandomCategoryBase
 	{
+		private Random _random;
+
 		protected int Seed 
 		{ 
 			get; set;
@@ -11,7 +13,7 @@ namespace RandomData
 
 		protected RandomCategoryBase(int seed)
 		{
-			Seed = seed;
+			_random = new Random(seed);
 		}
 
 		protected RandomCategoryBase()
@@ -21,7 +23,7 @@ namespace RandomData
 
 		protected Random NewRandom()
 		{
-			return new Random(Seed);
+			return _random;
 		}
 	}
 }

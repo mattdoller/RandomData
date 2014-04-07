@@ -42,6 +42,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Categories\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categories\RandomNameTests.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Categories\RandomNetTests.cs" />
     <Compile Include="Categories\RandomLocationTests.cs" />
     <Compile Include="Categories\RandomBooleanTests.cs" />
+    <Compile Include="Extensions\ExtensionMethodsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RandomData\RandomData.csproj">
