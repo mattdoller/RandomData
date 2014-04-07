@@ -1,15 +1,12 @@
 using System;
+using RandomData.Generators;
 
 namespace RandomData.Categories
 {
 	public class RandomNet : RandomCategoryBase
 	{
-		public RandomNet()
-		{
-		}
-
-		public RandomNet(int seed)
-			: base(seed)
+		public RandomNet(IRandomGenerator random) 
+			: base(random)
 		{
 		}
 

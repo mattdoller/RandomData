@@ -3,18 +3,19 @@ using NUnit.Framework;
 using System;
 using FluentAssertions;
 using RandomData.Extensions;
+using RandomData.Generators;
 
 namespace RandomData.Tests.Extensions
 {
 	[TestFixture()]
 	public class ExtensionMethodsTests
 	{
-		Random random;
+		private IRandomGenerator random;
 
 		[SetUp]
 		public void SetUp()
 		{
-			random = new Random(100);
+			random = new FakeRandom();
 		}
 
 		[Test]

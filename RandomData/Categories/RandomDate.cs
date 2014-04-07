@@ -1,18 +1,19 @@
 using System;
+using RandomData.Generators;
 
 namespace RandomData.Categories
 {
 	public class RandomDate : RandomCategoryBase
 	{
-		public RandomDate(int seed)
-			: base(seed)
+		public RandomDate(IRandomGenerator random) 
+			: base(random)
 		{
 		}
 
 		public DateTime DateBetween(DateTime lower, DateTime upper)
 		{
 			var days = (upper - lower).Days;
-			return lower.AddDays(NewRandom().NextDouble() * days);
+			throw new NotImplementedException();
 		}
 	}
 }

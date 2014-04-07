@@ -1,13 +1,14 @@
 using System;
 using RandomData.Data;
 using RandomData.Extensions;
+using RandomData.Generators;
 
 namespace RandomData.Categories
 {
 	public class RandomName : RandomCategoryBase
 	{
-		public RandomName(int seed)
-			: base(seed)
+		public RandomName(IRandomGenerator random) 
+			: base(random)
 		{
 		}
 
@@ -70,13 +71,15 @@ namespace RandomData.Categories
 			{
 				return String.Format("{0} {1}", FirstNameForGender(gender), LastName());
 			}
-			else if (nameType == NameType.FirstMiddleInitialLast)
+			
+			if (nameType == NameType.FirstMiddleInitialLast)
 			{
 				return String.Format("{0} {1} {2}", 
 					FirstNameForGender(gender), Initial(), LastName()
 				);
 			}
-			else if (nameType == NameType.FirstMiddleLast)
+			
+			if (nameType == NameType.FirstMiddleLast)
 			{
 				return String.Format("{0} {1} {2}",
 					FirstNameForGender(gender), FirstNameForGender(gender), LastName()

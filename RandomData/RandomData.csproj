@@ -51,6 +51,8 @@
     <Compile Include="Categories\RandomBoolean.cs" />
     <Compile Include="Extensions\ExtensionMethods.cs" />
     <Compile Include="Data\Names.cs" />
+    <Compile Include="Generators\IRandomGenerator.cs" />
+    <Compile Include="Generators\SystemRandom.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup />

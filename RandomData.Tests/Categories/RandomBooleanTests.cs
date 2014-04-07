@@ -10,14 +10,14 @@ namespace RandomData.Tests.Categories
 		[Test]
 		public void Test_Random_True()
 		{
-			var randomized = new RandomBoolean(100);
+			var randomized = new RandomBoolean(new FakeRandom());
 			randomized.Boolean().Should().Be(true);
 		}
 
 		[Test]
 		public void Test_Random_False()
 		{
-			var randomized = new RandomBoolean(101);
+			var randomized = new RandomBoolean(new FakeRandom());
 			randomized.Boolean().Should().Be(false);
 		}
 	}

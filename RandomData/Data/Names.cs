@@ -79,7 +79,7 @@ namespace RandomData.Data
 		{
 			CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
 			TextInfo textInfo = cultureInfo.TextInfo;
-			return textInfo.ToTitleCase(s);
+			return textInfo.ToTitleCase(s.ToLower());
 		}
 	}
 }

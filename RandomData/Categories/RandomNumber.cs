@@ -1,9 +1,15 @@
 using System;
+using RandomData.Generators;
 
 namespace RandomData.Categories
 {
 	public class RandomNumber : RandomCategoryBase
 	{
+		public RandomNumber(IRandomGenerator random) 
+			: base(random)
+		{
+		}
+
 		public int IntBetween(int lower, int upper)
 		{
 			throw new NotImplementedException();

@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using RandomData.Generators;
 
 namespace RandomData.Extensions
 {
 	public static class ExtensionMethods
 	{
-		public static T PickFrom<T>(this Random random, T[] array)
+		public static T PickFrom<T>(this IRandomGenerator random, T[] array)
 		{
 			if (array == null)
 			{

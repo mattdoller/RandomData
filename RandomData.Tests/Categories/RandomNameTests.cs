@@ -12,7 +12,7 @@ namespace RandomData.Tests.Categories
 		[SetUp]
 		public void SetUp()
 		{
-			randomized = new RandomName(100);
+			randomized = new RandomName(new FakeRandom());
 		}
 
 		[Test]

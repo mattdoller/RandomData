@@ -12,19 +12,18 @@ namespace RandomData.Tests.Categories
 		[SetUp]
 		public void SetUp()
 		{
-			randomizer = new RandomNet(100);
+			randomizer = new RandomNet(new FakeRandom());
 		}
 
 		[Test]
 		public void Test_IPv4()
 		{
-			randomizer.IPv4().Should().Be("144.17.91.161");
+			randomizer.IPv4().Should().Be("1.2.3.5");
 		}
 
 		[Test]
 		public void Test_IPv4_Matches_Regex()
 		{
-			randomizer = new RandomNet();
 			randomizer.IPv4().Should().MatchRegex(@"\d.\d.\d.\d");
 		}
 	}
