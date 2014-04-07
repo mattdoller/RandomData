@@ -3,26 +3,25 @@ using NUnit.Framework;
 using System;
 using FluentAssertions;
 using RandomData.Extensions;
-using RandomData.Generators;
 
 namespace RandomData.Tests.Extensions
 {
-	[TestFixture()]
+	[TestFixture]
 	public class ExtensionMethodsTests
 	{
-		private IRandomGenerator random;
+		private FakeRandom random;
 
 		[SetUp]
 		public void SetUp()
 		{
-			random = new FakeRandom();
+			random = new FakeRandom(3);
 		}
 
 		[Test]
 		public void Test_PickFrom_Picks_Single_Item()
 		{
 			var array = new[] { "one", "two", "three", "four", "five" };
-			random.PickFrom(array).Should().Be("five");
+			random.PickFrom(array).Should().Be("one");
 		}
 
 		[Test]
@@ -42,7 +41,7 @@ namespace RandomData.Tests.Extensions
 		[Test]
 		public void Test_ToChar_Throws_Exception_For_Invalid_Args()
 		{
-			Action action = () => 'e'.To('a');
+			Action action = () => 'e'.To('a').ToList();
 			action.ShouldThrow<ArgumentException>();
 		}
 

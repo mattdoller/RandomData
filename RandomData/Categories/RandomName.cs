@@ -74,7 +74,7 @@ namespace RandomData.Categories
 			
 			if (nameType == NameType.FirstMiddleInitialLast)
 			{
-				return String.Format("{0} {1} {2}", 
+				return String.Format("{0} {1}. {2}", 
 					FirstNameForGender(gender), Initial(), LastName()
 				);
 			}

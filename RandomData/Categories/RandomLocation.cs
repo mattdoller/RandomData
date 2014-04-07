@@ -1,4 +1,5 @@
 using System;
+using RandomData.Data;
 using RandomData.Generators;
 
 namespace RandomData.Categories
@@ -27,12 +28,12 @@ namespace RandomData.Categories
 
 		public string ZipCode()
 		{
-			throw new NotImplementedException();
+			return NumericString(5);
 		}
 
 		public string ZipCodePlusFour()
 		{
-			throw new NotImplementedException();
+			return String.Format("{0}-{1}", ZipCode(), NumericString(4));
 		}
 
 		public string State()

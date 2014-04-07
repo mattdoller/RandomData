@@ -26,7 +26,7 @@ namespace RandomData.Categories
 			}
 
 			StringBuilder numeric = new StringBuilder();
-			for (int i = 0; i <= length; i++)
+			for (int i = 0; i < length; i++)
 			{
 				numeric.Append(NewRandom().Next(0, 9));
 			}

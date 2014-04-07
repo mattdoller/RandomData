@@ -18,49 +18,55 @@ namespace RandomData.Tests.Categories
 		[Test]
 		public void Test_FirstName()
 		{
-			randomized.FirstName().Should().Be("Bob");
+			randomized.FirstName().Should().Be("Anthony");
 		}
 
 		[Test]
 		public void Test_FirstNameMale()
 		{
-			Assert.Fail();
+			randomized.FirstNameMale().Should().Be("Anthony");
 		}
 
 		[Test]
 		public void Test_FirstNameFemale()
 		{
-			Assert.Fail();
+			randomized.FirstNameFemale().Should().Be("Ann");
 		}
 
 		[Test]
 		public void Test_LastName()
 		{
-			Assert.Fail();
+			randomized.LastName().Should().Be("Anderson");
 		}
 
 		[Test]
 		public void Test_FullName()
 		{
-			Assert.Fail();
+			randomized.FullName().Should().Be("Arthur Anthony");
+			randomized.FullName(NameType.FirstMiddleInitialLast).Should().Be("Donald N. Jeffries");
+			randomized.FullName(NameType.FirstMiddleLast).Should().Be("John Hugh Peters");
 		}
 
 		[Test]
 		public void Test_FullNameMale()
 		{
-			Assert.Fail();
+			randomized.FullNameMale().Should().Be("Anthony Andrews");
+			randomized.FullNameMale(NameType.FirstMiddleInitialLast).Should().Be("Brian F. Clarke");
+			randomized.FullNameMale(NameType.FirstMiddleLast).Should().Be("Harold Kevin Moore");
 		}
 
 		[Test]
 		public void Test_FullNameFemale()
 		{
-			Assert.Fail();
+			randomized.FullNameFemale().Should().Be("Ann Andrews");
+			randomized.FullNameFemale(NameType.FirstMiddleInitialLast).Should().Be("Anne F. Clarke");
+			randomized.FullNameFemale(NameType.FirstMiddleLast).Should().Be("Dorothy Jessica Moore");
 		}
 
 		[Test]
 		public void Test_Initial()
 		{
-			randomized.Initial().Should().Be("Y");
+			randomized.Initial().Should().Be("B");
 		}
 	}
 }

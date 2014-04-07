@@ -13,7 +13,7 @@ namespace RandomData.Categories
 		public DateTime DateBetween(DateTime lower, DateTime upper)
 		{
 			var days = (upper - lower).Days;
-			throw new NotImplementedException();
+			return lower.AddDays(NewRandom().Next(days));
 		}
 	}
 }

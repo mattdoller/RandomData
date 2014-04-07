@@ -50,7 +50,7 @@ namespace RandomData.Data
 
 		public static string[] LastNames
 		{
-			get { return _lastNames ?? (_lastNames = StringsToArray(LAST_NAMES)); }
+			get { return _lastNames ?? (_lastNames = StringsToArray(LAST_NAMES).Select(Titleize).ToArray()); }
 		}
 
 		public static string[] IncorporationTypes

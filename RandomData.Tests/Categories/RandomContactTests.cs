@@ -2,13 +2,8 @@ using NUnit.Framework;
 
 namespace RandomData.Tests.Categories
 {
-	[TestFixture()]
+	[TestFixture]
 	public class RandomContactTests
 	{
-		[Test()]
-		public void TestCase ()
-		{
-		}
 	}
 }
-
