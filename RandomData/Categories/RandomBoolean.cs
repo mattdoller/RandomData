@@ -11,7 +11,7 @@ namespace RandomData.Categories
 
 		public bool Boolean()
 		{
-			return NewRandom().Next(0, 1) == 0;
+			return NewRandom().Next() % 2 == 0;
 		}
 	}
 }

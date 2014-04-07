@@ -7,19 +7,20 @@ namespace RandomData.Tests.Categories
 	[TestFixture]
 	public class RandomBooleanTests
 	{
-		[Test]
-		public void Test_Random_True()
+		private RandomBoolean randomized;
+
+		[SetUp]
+		public void SetUp()
 		{
-			var randomized = new RandomBoolean(new FakeRandom());
-			randomized.Boolean().Should().Be(true);
+			randomized = new RandomBoolean(new FakeRandom());
 		}
 
 		[Test]
-		public void Test_Random_False()
+		public void Test_Random_Output()
 		{
-			var randomized = new RandomBoolean(new FakeRandom());
+			randomized.Boolean().Should().Be(false);
+			randomized.Boolean().Should().Be(true);
 			randomized.Boolean().Should().Be(false);
 		}
 	}
 }
-
