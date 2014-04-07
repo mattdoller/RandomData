@@ -1,7 +1,6 @@
 using NUnit.Framework;
-using System;
 
-namespace RandomData.Tests
+namespace RandomData.Tests.Categories
 {
 	[TestFixture()]
 	public class RandomContactTests

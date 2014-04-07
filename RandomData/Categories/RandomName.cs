@@ -1,5 +1,6 @@
 using System;
 using RandomData.Data;
+using RandomData.Extensions;
 
 namespace RandomData.Categories
 {

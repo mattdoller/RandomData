@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RandomData
+namespace RandomData.Extensions
 {
 	public static class ExtensionMethods
 	{

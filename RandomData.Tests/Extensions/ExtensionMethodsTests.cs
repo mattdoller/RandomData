@@ -2,8 +2,9 @@ using System.Linq;
 using NUnit.Framework;
 using System;
 using FluentAssertions;
+using RandomData.Extensions;
 
-namespace RandomData.Tests
+namespace RandomData.Tests.Extensions
 {
 	[TestFixture()]
 	public class ExtensionMethodsTests
