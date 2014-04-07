@@ -39,6 +39,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Locations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Categories\RandomCategoryBase.cs" />
     <Compile Include="Categories\RandomNumber.cs" />

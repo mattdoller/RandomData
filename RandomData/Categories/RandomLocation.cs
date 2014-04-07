@@ -1,5 +1,6 @@
 using System;
 using RandomData.Data;
+using RandomData.Extensions;
 using RandomData.Generators;
 
 namespace RandomData.Categories
@@ -13,17 +14,26 @@ namespace RandomData.Categories
 
 		public string AddressLine1()
 		{
-			throw new NotImplementedException();
+			return String.Format(
+				"{0} {1} {2}.",
+				NumericString(3),
+				NewRandom().PickFrom(Locations.StreetNames),
+				NewRandom().PickFrom(Locations.StreetTypes)
+			);
 		}
 
 		public string AddressLine2()
 		{
-			throw new NotImplementedException();
+			return String.Format(
+				"{0}. {1}",
+				NewRandom().PickFrom(Locations.AddressLine2Types),
+				NumericString(3)
+			);
 		}
 
 		public string City()
 		{
-			throw new NotImplementedException();
+			return NewRandom().PickFrom(Locations.Cities);
 		}
 
 		public string ZipCode()
@@ -38,17 +48,17 @@ namespace RandomData.Categories
 
 		public string State()
 		{
-			throw new NotImplementedException();
+			return NewRandom().PickFrom(Locations.StateAbbreviations);
 		}
 
 		public string StateName()
 		{
-			throw new NotImplementedException();
+			return NewRandom().PickFrom(Locations.States);
 		}
 
 		public string Country()
 		{
-			throw new NotImplementedException();
+			return NewRandom().PickFrom(Locations.Countries);
 		}
 	}
 }
