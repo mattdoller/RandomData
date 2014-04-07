@@ -61,7 +61,7 @@ namespace RandomData.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Apt|Bsmt|Bldg|Dept|Fl|Frnt|Hngr|Lbby|Lot|Lowr|Ofc|Ph|Pier|Rear|Rm|Side|Slip|Spc|Stop|Ste|Trlr|Unit|Uppr.
         /// </summary>
         internal static string AddressLine2Types {
             get {
@@ -70,7 +70,7 @@ namespace RandomData.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Midway|Mount Pleasant|Greenwood|Franklin|Oak Grove|Centerville|Salem|Georgetown|Fairview|Riverside|Rotorua|Tauranga|Whakatane|Taupo|Wanganui|Nababeep|Aggeneys|Pofadder|Polokwane|Bela|Bela|Goukamma|Karatara|Tswane|Prieska|Upington|Hoopstad|Bultfontein|Wesselsbron|Bothaville|Trompsburg|Henneman|Musina|Ogies|Kgatlahong|Tembisa|Tekoza|Sebokeng|Muntaung|Umnkomaaz.
         /// </summary>
         internal static string Cities {
             get {
@@ -79,7 +79,7 @@ namespace RandomData.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Clothier|Publishing|Computing|Consulting|Engineering|Industries|Marketing|Manufacturing.
         /// </summary>
         internal static string CompanyTypes {
             get {
@@ -88,7 +88,7 @@ namespace RandomData.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Afghanistan|Albania|Algeria|American Samoa|Andorra|Angola|Antigua and Barbuda|Argentina|Armenia|Aruba|Australia|Austria|Azerbaijan|The Bahamas|Bahrain|Bangladesh|Barbados|Belarus|Belgium|Belize|Benin|Bermuda|Bhutan|Bolivia|Bosnia and Herzegovina|Botswana|Brazil|Brunei Darussalam|Bulgaria|Burkina Faso|Burundi|Cambodia|Cameroon|Canada|Cape Verde|Cayman Islands|Central African Republic|Chad|Channel Islands|Chile|China|Colombia|Comoros|Democratic Republic of Congo|Republic of Congo|Costa Rica|Côte d&apos;Ivoire|Croa [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Countries {
             get {
@@ -97,7 +97,7 @@ namespace RandomData.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to example.com|example.net|example.org|example.edu.
         /// </summary>
         internal static string Domains {
             get {
@@ -106,7 +106,7 @@ namespace RandomData.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Alison|Ann|Anna|Anne|Barbara|Betty|Beryl|Carol|Charlotte|Cheryl|Deborah|Diana|Donna|Dorothy|Elizabeth|Eve|Felicity|Fiona|Helen|Helena|Jennifer|Jessica|Judith|Karen|Kimberly|Laura|Linda|Lisa|Lucy|Margaret|Maria|Mary|Michelle|Nancy|Patricia|Polly|Robyn|Ruth|Sandra|Sarah|Sharon|Susan|Tabitha|Ursula|Victoria|Wendy.
         /// </summary>
         internal static string FirstNamesFemale {
             get {
@@ -115,7 +115,7 @@ namespace RandomData.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Adam|Anthony|Arthur|Brian|Charles|Christopher|Daniel|David|Donald|Edgar|Edward|Edwin|George|Harold|Herbert|Hugh|James|Jason|John|Joseph|Kenneth|Kevin|Marcus|Mark|Matthew|Michael|Paul|Philip|Richard|Robert|Roger|Ronald|Simon|Steven|Terry|Thomas|William.
         /// </summary>
         internal static string FirstNamesMale {
             get {
@@ -124,7 +124,7 @@ namespace RandomData.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to LLC|Inc|Inc.|Ltd.|LP|LLP|Corp.|PLLC.
         /// </summary>
         internal static string IncorporationTypes {
             get {
@@ -133,7 +133,7 @@ namespace RandomData.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Abel|Anderson|Andrews|Anthony|Baker|Brown|Burrows|Clark|Clarke|Clarkson|Davidson|Davies|Davis|Dent|Edwards|Garcia|Grant|Hall|Harris|Harrison|Jackson|Jeffries|Jefferson|Johnson|Jones|Kirby|Kirk|Lake|Lee|Lewis|Martin|Martinez|Major|Miller|Moore|Oates|Peters|Peterson|Robertson|Robinson|Rodriguez|Smith|Smythe|Stevens|Taylor|Thatcher|Thomas|Thompson|Walker|Washington|White|Williams|Wilson|Yorke.
         /// </summary>
         internal static string LastNames {
             get {
@@ -142,7 +142,7 @@ namespace RandomData.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Lorem ipsum dolor sit amet  consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua|Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat|Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur|Excepteur sint occaecat cupidatat non proident  sunt in culpa qui officia deserunt mollit anim id est laborum|There&apos;s a voice that keeps on calling me|Down the road that&apos;s where I&apos;l [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Sentences {
             get {
@@ -151,7 +151,7 @@ namespace RandomData.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY.
         /// </summary>
         internal static string StateAbbreviations {
             get {
@@ -160,7 +160,7 @@ namespace RandomData.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming.
         /// </summary>
         internal static string States {
             get {
@@ -169,7 +169,7 @@ namespace RandomData.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Acacia|Beech|Birch|Cedar|Cherry|Chestnut|Elm|Larch|Laurel|Linden|Maple|Oak|Pine|Rose|Walnut|Willow|Adams|Franklin|Jackson|Jefferson|Lincoln|Madison|Washington|Wilson|Churchill|Tyndale|Latimer|Cranmer|Highland|Hill|Park|Woodland|Sunset|Virginia|1st|2nd|4th|5th|34th|42nd.
         /// </summary>
         internal static string StreetNames {
             get {
@@ -178,7 +178,7 @@ namespace RandomData.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to St|Ave|Rd|Blvd|Trl|Ter|Rdg|Pl|Pkwy|Ct|Circle.
         /// </summary>
         internal static string StreetTypes {
             get {

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using RandomData.Generators;
 
@@ -52,6 +53,11 @@ namespace RandomData.Extensions
 				yield return start;
 				start++;
 			}
+		}
+
+		public static string[] SplitResource(this string s)
+		{
+			return s.Split(new[] {'|'}, StringSplitOptions.RemoveEmptyEntries).ToArray();
 		}
 	}
 }

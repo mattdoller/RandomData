@@ -118,45 +118,59 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddressLine2Types" xml:space="preserve">
-    <value />
+    <value>Apt|Bsmt|Bldg|Dept|Fl|Frnt|Hngr|Lbby|Lot|Lowr|Ofc|Ph|Pier|Rear|Rm|Side|Slip|Spc|Stop|Ste|Trlr|Unit|Uppr</value>
+    <comment>Address Line 2 Types</comment>
   </data>
   <data name="Cities" xml:space="preserve">
-    <value />
+    <value>Midway|Mount Pleasant|Greenwood|Franklin|Oak Grove|Centerville|Salem|Georgetown|Fairview|Riverside|Rotorua|Tauranga|Whakatane|Taupo|Wanganui|Nababeep|Aggeneys|Pofadder|Polokwane|Bela|Bela|Goukamma|Karatara|Tswane|Prieska|Upington|Hoopstad|Bultfontein|Wesselsbron|Bothaville|Trompsburg|Henneman|Musina|Ogies|Kgatlahong|Tembisa|Tekoza|Sebokeng|Muntaung|Umnkomaaz</value>
+    <comment>Cities</comment>
   </data>
   <data name="CompanyTypes" xml:space="preserve">
-    <value />
+    <value>Clothier|Publishing|Computing|Consulting|Engineering|Industries|Marketing|Manufacturing</value>
+    <comment>Company Types</comment>
   </data>
   <data name="Countries" xml:space="preserve">
-    <value />
+    <value>Afghanistan|Albania|Algeria|American Samoa|Andorra|Angola|Antigua and Barbuda|Argentina|Armenia|Aruba|Australia|Austria|Azerbaijan|The Bahamas|Bahrain|Bangladesh|Barbados|Belarus|Belgium|Belize|Benin|Bermuda|Bhutan|Bolivia|Bosnia and Herzegovina|Botswana|Brazil|Brunei Darussalam|Bulgaria|Burkina Faso|Burundi|Cambodia|Cameroon|Canada|Cape Verde|Cayman Islands|Central African Republic|Chad|Channel Islands|Chile|China|Colombia|Comoros|Democratic Republic of Congo|Republic of Congo|Costa Rica|Côte d'Ivoire|Croatia|Cuba|Cyprus|Czech Republic|Denmark|Djibouti|Dominica|Dominican Republic|Ecuador|Arab Republic of Egypt|El Salvador|Equatorial Guinea|Eritrea|Estonia|Ethiopia|Faeroe Islands|Fiji|Finland|France|French Polynesia|Gabon|The Gambia|Georgia|Germany|Ghana|Greece|Greenland|Grenada|Guam|Guatemala|Guinea|Guinea-Bissau|Guyana|Haiti|Honduras|Hong Kong|Hungary|Iceland|India|Indonesia|Islamic Republic of Iran|Iraq|Ireland|Isle of Man|Israel|Italy|Jamaica|Japan|Jordan|Kazakhstan|Kenya|Kiribati|North Korea|South Korea|Kuwait|Kyrgyz Republic|Lao PDR|Latvia|Lebanon|Lesotho|Liberia|Libya|Liechtenstein|Lithuania|Luxembourg|Macao|Macedonia|Madagascar|Malawi|Malaysia|Maldives|Mali|Malta|Marshall Islands|Mauritania|Mauritius|Mayotte|Mexico|Micronesia|Moldova|Monaco|Mongolia|Montenegro|Morocco|Mozambique|Myanmar|Namibia|Nepal|Netherlands|Netherlands Antilles|New Caledonia|New Zealand|Nicaragua|Niger|Nigeria|Northern Mariana Islands|Norway|Oman|Pakistan|Palau|Panama|Papua New Guinea|Paraguay|Peru|Philippines|Poland|Portugal|Puerto Rico|Qatar|Romania|Russian Federation|Rwanda|Samoa|San Marino|São Tomé and Principe|Saudi Arabia|Senegal|Serbia|Seychelles|Sierra Leone|Singapore|Slovak Republic|Slovenia|Solomon Islands|Somalia|South Africa|Spain|Sri Lanka|St. Kitts and Nevis|St. Lucia|St. Vincent and the Grenadines|Sudan|Suriname|Swaziland|Sweden|Switzerland|Syrian Arab Republic|Tajikistan|Tanzania|Thailand|Timor-Leste|Togo|Tonga|Trinidad and Tobago|Tunisia|Turkey|Turkmenistan|Uganda|Ukraine|United Arab Emirates|United Kingdom|United States|Uruguay|Uzbekistan|Vanuatu|Venezuela|Vietnam|Virgin Islands (U.S.)|West Bank and Gaza|Yemen, Rep.|Zambia|Zimbabwe</value>
+    <comment>Countries</comment>
   </data>
   <data name="Domains" xml:space="preserve">
-    <value />
+    <value>example.com|example.net|example.org|example.edu</value>
+    <comment>Domains</comment>
   </data>
   <data name="FirstNamesFemale" xml:space="preserve">
-    <value />
+    <value>Alison|Ann|Anna|Anne|Barbara|Betty|Beryl|Carol|Charlotte|Cheryl|Deborah|Diana|Donna|Dorothy|Elizabeth|Eve|Felicity|Fiona|Helen|Helena|Jennifer|Jessica|Judith|Karen|Kimberly|Laura|Linda|Lisa|Lucy|Margaret|Maria|Mary|Michelle|Nancy|Patricia|Polly|Robyn|Ruth|Sandra|Sarah|Sharon|Susan|Tabitha|Ursula|Victoria|Wendy</value>
+    <comment>First names for a female</comment>
   </data>
   <data name="FirstNamesMale" xml:space="preserve">
-    <value />
+    <value>Adam|Anthony|Arthur|Brian|Charles|Christopher|Daniel|David|Donald|Edgar|Edward|Edwin|George|Harold|Herbert|Hugh|James|Jason|John|Joseph|Kenneth|Kevin|Marcus|Mark|Matthew|Michael|Paul|Philip|Richard|Robert|Roger|Ronald|Simon|Steven|Terry|Thomas|William</value>
+    <comment>First names for a male</comment>
   </data>
   <data name="IncorporationTypes" xml:space="preserve">
-    <value />
+    <value>LLC|Inc|Inc.|Ltd.|LP|LLP|Corp.|PLLC</value>
+    <comment>Incorporation types</comment>
   </data>
   <data name="LastNames" xml:space="preserve">
-    <value />
+    <value>Abel|Anderson|Andrews|Anthony|Baker|Brown|Burrows|Clark|Clarke|Clarkson|Davidson|Davies|Davis|Dent|Edwards|Garcia|Grant|Hall|Harris|Harrison|Jackson|Jeffries|Jefferson|Johnson|Jones|Kirby|Kirk|Lake|Lee|Lewis|Martin|Martinez|Major|Miller|Moore|Oates|Peters|Peterson|Robertson|Robinson|Rodriguez|Smith|Smythe|Stevens|Taylor|Thatcher|Thomas|Thompson|Walker|Washington|White|Williams|Wilson|Yorke</value>
+    <comment>Last names</comment>
   </data>
   <data name="Sentences" xml:space="preserve">
-    <value />
+    <value>Lorem ipsum dolor sit amet  consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua|Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat|Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur|Excepteur sint occaecat cupidatat non proident  sunt in culpa qui officia deserunt mollit anim id est laborum|There's a voice that keeps on calling me|Down the road that's where I'll always be|Every stop I make I make a new friend; Can't stay for long just turn around and I'm gone again|Maybe tomorrow I'll want to settle down - until tomorrow I'll just keep moving on|Hong Kong Phooey number one super guy, Hong Kong Phooey quicker than the human eye|He's got style, a groovy style, and a car that just won't stop|Hey there where ya goin, not exactly knowin'|Who says you have to call just one place home?|He's going everywhere, B.J. McKay and his best friend Bear|He just keeps on movin' and ladies keep improvin'|Every day is better than the last, with new dreams and better scenes and best of all I don't pay property tax|Rolling  down to Dallas - who is providin' my palace?|Off to New Orleans or who knows where|Soaring through all the galaxies in search of Earth flying in to the night|Ulysses, fighting evil and tyranny with all his power and with all of his might|No-one else can do the things you do, like a bolt of thunder from the blue|Always fighting all the evil forces bringing peace and justice to all|I've gotten burned over Cheryl Tiegs and blown up for Raquel Welch, but when I end up in the hay it's only hay, hey hey|I might jump an open drawbridge or Tarzan from a vine, beause I'm the unknown stuntman that makes Eastwood look so fine</value>
+    <comment>Sentences</comment>
   </data>
   <data name="StateAbbreviations" xml:space="preserve">
-    <value />
+    <value>AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY</value>
+    <comment>State abbreviations</comment>
   </data>
   <data name="States" xml:space="preserve">
-    <value />
+    <value>Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming</value>
+    <comment>States</comment>
   </data>
   <data name="StreetNames" xml:space="preserve">
-    <value />
+    <value>Acacia|Beech|Birch|Cedar|Cherry|Chestnut|Elm|Larch|Laurel|Linden|Maple|Oak|Pine|Rose|Walnut|Willow|Adams|Franklin|Jackson|Jefferson|Lincoln|Madison|Washington|Wilson|Churchill|Tyndale|Latimer|Cranmer|Highland|Hill|Park|Woodland|Sunset|Virginia|1st|2nd|4th|5th|34th|42nd</value>
+    <comment>Street names</comment>
   </data>
   <data name="StreetTypes" xml:space="preserve">
-    <value />
+    <value>St|Ave|Rd|Blvd|Trl|Ter|Rdg|Pl|Pkwy|Ct|Circle</value>
+    <comment>Street types</comment>
   </data>
 </root>
