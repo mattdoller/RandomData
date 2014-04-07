@@ -1,10 +1,10 @@
 using System;
 
-namespace RandomData
+namespace RandomData.Categories
 {
 	public abstract class RandomCategoryBase
 	{
-		private Random _random;
+		private readonly Random _random;
 
 		protected int Seed 
 		{ 

@@ -1,3 +1,4 @@
+using System.Linq;
 using NUnit.Framework;
 using System;
 using FluentAssertions;
@@ -34,6 +35,21 @@ namespace RandomData.Tests
 		{
 			Action action = () => random.PickFrom(new string[0]);
 			action.ShouldThrow<ArgumentException>();
+		}
+
+		[Test]
+		public void Test_ToChar_Throws_Exception_For_Invalid_Args()
+		{
+			Action action = () => 'e'.To('a');
+			action.ShouldThrow<ArgumentException>();
+		}
+
+		[Test]
+		public void Test_ToChar()
+		{
+			var letters = 'a'.To('j').ToArray();
+			var expected = new[] {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};
+			letters.ShouldBeEquivalentTo(expected);
 		}
 	}
 }

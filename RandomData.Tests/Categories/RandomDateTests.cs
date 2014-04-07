@@ -1,8 +1,9 @@
 using System;
 using FluentAssertions;
 using NUnit.Framework;
+using RandomData.Categories;
 
-namespace RandomData.Tests
+namespace RandomData.Tests.Categories
 {
 	[TestFixture]
 	public class RandomDateTests

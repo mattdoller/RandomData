@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace RandomData
+namespace RandomData.Data
 {
 	public static class Names
 	{
@@ -69,7 +69,8 @@ namespace RandomData
 			var separator = "";
 			foreach (var item in strings)
 			{
-				combined.Append(item).Append(" ");
+				combined.Append(separator).Append(item);
+				separator = " ";
 			}
 			return combined.ToString().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 		}

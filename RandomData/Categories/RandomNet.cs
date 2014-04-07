@@ -1,13 +1,10 @@
 using System;
-using System.Net;
-using System.Text;
 
-namespace RandomData
+namespace RandomData.Categories
 {
 	public class RandomNet : RandomCategoryBase
 	{
 		public RandomNet()
-			: base()
 		{
 		}
 

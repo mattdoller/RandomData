@@ -38,6 +38,20 @@ namespace RandomData
 			}
 			return stringBuilder;
 		}
+
+		public static IEnumerable<char> To(this char start, char end)
+		{
+			if (end <= start)
+			{
+				throw new ArgumentException("end must be greater than start");
+			}
+
+			while (start <= end)
+			{
+				yield return start;
+				start++;
+			}
+		}
 	}
 }
 

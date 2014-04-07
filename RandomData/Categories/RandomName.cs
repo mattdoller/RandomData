@@ -1,6 +1,7 @@
 using System;
+using RandomData.Data;
 
-namespace RandomData
+namespace RandomData.Categories
 {
 	public class RandomName : RandomCategoryBase
 	{
