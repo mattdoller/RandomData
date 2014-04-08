@@ -50,7 +50,6 @@
     <Compile Include="Categories\RandomNameTests.cs" />
     <Compile Include="Categories\RandomDateTests.cs" />
     <Compile Include="Categories\RandomTextTests.cs" />
-    <Compile Include="Categories\RandomNumberTests.cs" />
     <Compile Include="Categories\RandomContactTests.cs" />
     <Compile Include="Categories\RandomNetTests.cs" />
     <Compile Include="Categories\RandomLocationTests.cs" />
