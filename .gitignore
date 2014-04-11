@@ -175,3 +175,8 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+
+# nupkg, nuspec, and AssemblyInfo.cs files are all generated
+*.nupkg
+*.nuspec
+AssemblyInfo.cs
