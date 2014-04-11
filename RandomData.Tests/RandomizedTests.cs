@@ -39,6 +39,9 @@ namespace RandomData.Tests
 			Randomized.Net.Url(UrlType.DomainOnly).Should().MatchRegex(@"http:\/\/www.example.[a-z]{3}");
 			Randomized.Net.Url(UrlType.DomainAndPath).Should().MatchRegex(@"http:\/\/www.example.[a-z]{3}\/[a-z]{6}");
 			Randomized.Net.Url(UrlType.DomainPathAndPage).Should().MatchRegex(@"http:\/\/www.example.[a-z]{3}\/[a-z]{6}\/[a-z]{6}.html");
+			Randomized.Text.Numeric(20).Should().MatchRegex(@"\d{20}");
+			Randomized.Text.Alpha(20).Should().MatchRegex(@"[A-Z]{20}");
+			Randomized.Text.Alphanumeric(20).Should().MatchRegex(@"\w{20}");
 		}
 	}
 }
