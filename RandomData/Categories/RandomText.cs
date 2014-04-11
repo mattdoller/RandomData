@@ -1,5 +1,8 @@
 using System;
+using System.Text;
+using RandomData.Extensions;
 using RandomData.Generators;
+using RandomData.Resources;
 
 namespace RandomData.Categories
 {
@@ -15,9 +18,28 @@ namespace RandomData.Categories
 			throw new NotImplementedException();
 		}
 
-		public string Paragraphs(int count = 2)
+		public string Sentences(int count = 2)
 		{
-			throw new NotImplementedException();
+			if (count <= 0)
+			{
+				throw new ArgumentException("count must be greater than 0");
+			}
+
+			var sentences = new StringBuilder();
+			string separator = "";
+
+			for (int i = 0; i < count; i++)
+			{
+				var sentence = NewRandom().PickFrom(Strings.Sentences.SplitResource());
+
+				sentences
+					.Append(separator)
+					.Append(sentence);
+
+				separator = " ";
+			}
+
+			return sentences.ToString();
 		}
 	}
 }

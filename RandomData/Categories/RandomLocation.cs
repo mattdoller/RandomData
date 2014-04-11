@@ -46,6 +46,23 @@ namespace RandomData.Categories
 			return String.Format("{0}-{1}", ZipCode(), NumericString(4));
 		}
 
+		public string PostalCode(PostalCodeFormat format = PostalCodeFormat.UnitedStatesZipCode)
+		{
+			switch (format)
+			{
+				case (PostalCodeFormat.UnitedStatesZipCode) :
+					return ZipCode();
+				case (PostalCodeFormat.UnitedStatesZipCodePlusFour) :
+					return ZipCodePlusFour();
+				case (PostalCodeFormat.Canada) :
+					return PostalCodeCanada();
+				case (PostalCodeFormat.UnitedKingdom) :
+					return PostalCodeUnitedKingdom();
+				default:
+					throw new ArgumentException("Unrecognized PostalCodeFormat");
+			}
+		}
+
 		public string State()
 		{
 			return NewRandom().PickFrom(Locations.StateAbbreviations);
@@ -60,6 +77,34 @@ namespace RandomData.Categories
 		{
 			return NewRandom().PickFrom(Locations.Countries);
 		}
+
+		private string PostalCodeCanada()
+		{
+			return String.Format("{0}{1}{2} {3}{4}{5}", 
+				RandomAlphaCharacter(),
+				RandomNumericCharacter(),
+				RandomAlphaCharacter(),
+				RandomNumericCharacter(),
+				RandomAlphaCharacter(),
+				RandomNumericCharacter()
+			);
+		}
+
+		private string PostalCodeUnitedKingdom()
+		{
+			return String.Format("{0} {1}",
+				AlphanumericString(4),
+				AlphanumericString(3)
+			);
+		}
+	}
+
+	public enum PostalCodeFormat
+	{
+		UnitedStatesZipCode,
+		UnitedStatesZipCodePlusFour,
+		Canada,
+		UnitedKingdom
 	}
 }
 

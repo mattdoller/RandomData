@@ -1,6 +1,7 @@
 using FluentAssertions;
 using NUnit.Framework;
 using RandomData.Categories;
+using RandomData.Generators;
 
 namespace RandomData.Tests.Categories
 {
@@ -67,6 +68,21 @@ namespace RandomData.Tests.Categories
 		public void Test_Initial()
 		{
 			randomized.Initial().Should().Be("B");
+		}
+
+		[Test]
+		public void Test_Output_Matches_Regex()
+		{
+			randomized = new RandomName(new SystemRandom());
+
+			randomized.FirstName().Should().MatchRegex(@"[A-Z][a-z]+");
+			randomized.FirstNameMale().Should().MatchRegex(@"[A-Z][a-z]+");
+			randomized.FirstNameFemale().Should().MatchRegex(@"[A-Z][a-z]+");
+			randomized.LastName().Should().MatchRegex(@"[A-Z][a-z]+");
+			randomized.FullName().Should().MatchRegex(@"[A-Z][a-z]+ [A-Z][a-z]+");
+			randomized.FullNameMale().Should().MatchRegex(@"[A-Z][a-z]+ [A-Z][a-z]+");
+			randomized.FullNameFemale().Should().MatchRegex(@"[A-Z][a-z]+ [A-Z][a-z]+");
+			randomized.Initial().Should().MatchRegex(@"[A-Z]{1}");
 		}
 	}
 }
