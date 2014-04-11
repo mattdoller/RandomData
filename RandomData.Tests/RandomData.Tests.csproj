@@ -57,6 +57,7 @@
     <Compile Include="Extensions\ExtensionMethodsTests.cs" />
     <Compile Include="FakeRandom.cs" />
     <Compile Include="FakeRandomTests.cs" />
+    <Compile Include="RandomizedTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RandomData\RandomData.csproj">

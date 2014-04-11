@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace RandomData.Generators
 {
@@ -8,7 +9,7 @@ namespace RandomData.Generators
 
 		public SystemRandom()
 		{
-			_random = new Random();
+			_random = RandomHelper.Instance;
 		}
 
 		public int Next()
@@ -24,6 +25,27 @@ namespace RandomData.Generators
 		public int Next(int minValue, int maxValue)
 		{
 			return _random.Next(minValue, maxValue);
+		}
+
+		private static class RandomHelper
+		{
+			private static int seedCounter = new Random().Next();
+
+			[ThreadStatic] 
+			private static Random random;
+
+			public static Random Instance
+			{
+				get
+				{
+					if (random == null)
+					{
+						int seed = Interlocked.Increment(ref seedCounter);
+						random = new Random(seed);
+					}
+					return random;
+				}
+			}
 		}
 	}
 }

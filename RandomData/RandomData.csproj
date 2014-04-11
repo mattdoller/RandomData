@@ -53,6 +53,7 @@
     <Compile Include="Data\Names.cs" />
     <Compile Include="Generators\IRandomGenerator.cs" />
     <Compile Include="Generators\SystemRandom.cs" />
+    <Compile Include="Randomized.cs" />
     <Compile Include="Resources\Strings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
