@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using RandomData.Data;
 using RandomData.Extensions;
 using RandomData.Generators;
@@ -55,9 +56,32 @@ namespace RandomData.Categories
 			return FullNameForGender(nameType, Gender.Female);
 		}
 
-		public string CompanyName()
+		public string CompanyName(int partners = 2)
 		{
-			throw new NotImplementedException();
+			if (partners <= 0)
+			{
+				throw new ArgumentException("partners");
+			}
+
+			var names = new StringBuilder();
+			var separator = "";
+			var and = partners == 2 ? " and " : ", and ";
+
+			while (partners > 0)
+			{
+				names
+					.Append(separator)
+					.Append(LastName());
+
+				partners--;
+				separator = partners == 1 ? and : ", ";
+			}
+
+			return String.Format("{0} {1}, {2}",
+				names,
+				NewRandom().PickFrom(Names.CompanyTypes),
+				NewRandom().PickFrom(Names.IncorporationTypes)
+			);
 		}
 
 		private string FirstNameForGender(Gender gender)

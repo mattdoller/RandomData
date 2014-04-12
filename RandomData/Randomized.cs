@@ -6,29 +6,31 @@ namespace RandomData
 {
 	public static class Randomized
 	{
-		private static readonly Lazy<IRandomGenerator> _randomGenerator	= 
-			new Lazy<IRandomGenerator>(() => new SystemRandom());
-
 		private static readonly Lazy<RandomBoolean> _booleans =
-			new Lazy<RandomBoolean>(() => new RandomBoolean(_randomGenerator.Value));
+			new Lazy<RandomBoolean>(() => new RandomBoolean(NewRandom()));
 
 		private static readonly Lazy<RandomContact> _contacts =
-			new Lazy<RandomContact>(() => new RandomContact(_randomGenerator.Value));
+			new Lazy<RandomContact>(() => new RandomContact(NewRandom()));
 
 		private static readonly Lazy<RandomDate> _dates =
-			new Lazy<RandomDate>(() => new RandomDate(_randomGenerator.Value));
+			new Lazy<RandomDate>(() => new RandomDate(NewRandom()));
 
 		private static readonly Lazy<RandomLocation> _locations =
-			new Lazy<RandomLocation>(() => new RandomLocation(_randomGenerator.Value));
+			new Lazy<RandomLocation>(() => new RandomLocation(NewRandom()));
 
 		private static readonly Lazy<RandomName> _names =
-			new Lazy<RandomName>(() => new RandomName(_randomGenerator.Value));
+			new Lazy<RandomName>(() => new RandomName(NewRandom()));
 
 		private static readonly Lazy<RandomNet> _net =
-			new Lazy<RandomNet>(() => new RandomNet(_randomGenerator.Value));
+			new Lazy<RandomNet>(() => new RandomNet(NewRandom()));
 
 		private static readonly Lazy<RandomText> _text =
-			new Lazy<RandomText>(() => new RandomText(_randomGenerator.Value));
+			new Lazy<RandomText>(() => new RandomText(NewRandom()));
+
+		private static IRandomGenerator NewRandom()
+		{
+			return new SystemRandom();
+		}
 
 		public static RandomBoolean Booleans 
 		{

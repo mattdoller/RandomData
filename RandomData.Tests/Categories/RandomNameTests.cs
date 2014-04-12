@@ -71,6 +71,15 @@ namespace RandomData.Tests.Categories
 		}
 
 		[Test]
+		public void Test_CompanyName()
+		{
+			randomized.CompanyName().Should().Be("Anderson and Andrews Consulting, LLP");
+			randomized.CompanyName(1).Should().Be("Clarke Industries, LLP");
+			randomized.CompanyName(2).Should().Be("Moore and Anderson Publishing, LLC");
+			randomized.CompanyName(3).Should().Be("Hall, Anderson, and Andrews Consulting, LLP");
+		}
+
+		[Test]
 		public void Test_Output_Matches_Regex()
 		{
 			randomized = new RandomName(new SystemRandom());
@@ -83,6 +92,10 @@ namespace RandomData.Tests.Categories
 			randomized.FullNameMale().Should().MatchRegex(@"[A-Z][a-z]+ [A-Z][a-z]+");
 			randomized.FullNameFemale().Should().MatchRegex(@"[A-Z][a-z]+ [A-Z][a-z]+");
 			randomized.Initial().Should().MatchRegex(@"[A-Z]{1}");
+			randomized.CompanyName().Should().MatchRegex(@"\w+ and \w+ \w+, \w+");
+			randomized.CompanyName(1).Should().MatchRegex(@"\w+ \w+, \w+");
+			randomized.CompanyName(2).Should().MatchRegex(@"\w+ and \w+ \w+, \w+");
+			randomized.CompanyName(3).Should().MatchRegex(@"\w+, \w+, and \w+ \w+, \w+");
 		}
 	}
 }
