@@ -45,7 +45,8 @@ task Init -depends Init-Dependencies {
     -description "$description" `
     -product "$project_name $version" `
     -version "$version" `
-    -authors "$authors"
+    -authors "$authors" `
+    -internalsVisibleTo "$test_project_name"
 
   Generate-Assembly-Info `
     -file "$project_test_dir\Properties\AssemblyInfo.cs" `

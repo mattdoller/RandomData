@@ -6,7 +6,7 @@ using RandomData.Generators;
 
 namespace RandomData.Extensions
 {
-	public static class ExtensionMethods
+	internal static class ExtensionMethods
 	{
 		public static T PickFrom<T>(this IRandomGenerator random, T[] array)
 		{

@@ -19,6 +19,7 @@ function Generate-Assembly-Info
     [string]$authors,
     [string]$product,
     [string]$version,
+    [string]$internalsVisibleTo = "",
     [string]$file = $(throw "file is a required parameter.")
   )
 
@@ -41,6 +42,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersionAttribute(""$version"")]
 [assembly: AssemblyDelaySignAttribute(false)]
 "
+
+  if ($internalsVisibleTo -ne "") {
+    $asmInfo += "[assembly: InternalsVisibleTo(""$internalsVisibleTo"")]"
+  }
 
   $dir = [System.IO.Path]::GetDirectoryName($file)
   if ([System.IO.Directory]::Exists($dir) -eq $false)
