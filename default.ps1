@@ -1,18 +1,22 @@
 properties {
-  $project_name = "RandomData"
-  $test_project_name = "$project_name Tests"
   $authors = "Matt Doller"
   $description = "A library for generating random data to help with testing"
   $version = "0.0.1"
+
+  $project_name = "RandomData"
+  $test_project_name = "$project_name.Tests"
 
   $base_dir = resolve-path .
   $packages_config = "$base_dir\packages.config"
   $packages_dir = "$base_dir\packages"
   $build_dir = "$base_dir\build"
   $release_dir = "$base_dir\release"
+  $project_src_dir = "$base_dir\$project_name"
+  $project_csproj = "$project_src_dir\$project_name.csproj"
+  $project_test_dir = "$base_dir\$test_project_name"
   $nuspec = "$base_dir\$project_name.nuspec"
 
-  $sln = "$base_dir\RandomData.sln"
+  $sln = "$base_dir\$project_name.sln"
 
   $nunit_tools = "$packages_dir\NUnit.Runners.2.6.3\tools"
   $nunit_console = "$nunit_tools\nunit-console.exe"
@@ -36,7 +40,7 @@ task Init-Dependencies -depends Clean {
 
 task Init -depends Init-Dependencies {
   Generate-Assembly-Info `
-    -file "$base_dir\RandomData\Properties\AssemblyInfo.cs" `
+    -file "$project_src_dir\Properties\AssemblyInfo.cs" `
     -title "$project_name $version" `
     -description "$description" `
     -product "$project_name $version" `
@@ -44,7 +48,7 @@ task Init -depends Init-Dependencies {
     -authors "$authors"
 
   Generate-Assembly-Info `
-    -file "$base_dir\RandomData.Tests\Properties\AssemblyInfo.cs" `
+    -file "$project_test_dir\Properties\AssemblyInfo.cs" `
     -title "$test_project_name $version" `
     -description "$description" `
     -product "$test_project_name $version" `
@@ -60,7 +64,7 @@ task Compile -depends Init {
 }
 
 task Test -depends Compile {
-  & $nunit_console "$build_dir\RandomData.Tests.dll"
+  & $nunit_console "$build_dir\$test_project_name.dll"
   if ($lastExitCode -ne 0) {
     throw "Error: Test failure"
   }
@@ -76,5 +80,6 @@ task Init-PackageDependencies {
 }
 
 task Release -depends Init-PackageDependencies, Test {
-  & nuget pack $nuspec -outputdirectory . -basepath $build_dir -NoPackageAnalysis
+  New-Item -Path $release_dir -ItemType directory
+  & nuget pack $project_csproj -outputdirectory $release_dir
 }
