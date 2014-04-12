@@ -1,4 +1,6 @@
 using System;
+using System.Linq;
+using System.Text;
 using RandomData.Extensions;
 using RandomData.Generators;
 
@@ -13,12 +15,16 @@ namespace RandomData.Categories
 
 		public string IPv4()
 		{
-			return String.Format("{0}.{1}.{2}.{3}",
-	      NewRandom().Next(255),
-	      NewRandom().Next(255),
-	      NewRandom().Next(255),
-	      NewRandom().Next(255)
-			);
+			var ipv4 = new StringBuilder(NewRandom().Next(255).ToString());
+			Repeat(() => ipv4.AppendFormat(".{0}", NewRandom().Next(255)), 3);
+			return ipv4.ToString();
+		}
+
+		public string IPv6()
+		{
+			var ipv6 = new StringBuilder(HexadecimalString(4));
+			Repeat(() => ipv6.AppendFormat(":{0}", HexadecimalString(4)), 7);
+			return ipv6.ToString();
 		}
 
 		public string Url(UrlType urlType = UrlType.DomainOnly)
@@ -56,6 +62,14 @@ namespace RandomData.Categories
 				UrlForDomainAndPath(),
 				AlphaString(6).ToLower()
 			);
+		}
+
+		private void Repeat(Action action, int times)
+		{
+			for (var i = 0; i < times; i++)
+			{
+				action();
+			}
 		}
 	}
 

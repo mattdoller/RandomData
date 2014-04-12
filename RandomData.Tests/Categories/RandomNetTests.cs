@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
 using RandomData.Categories;
@@ -24,6 +25,12 @@ namespace RandomData.Tests.Categories
 		}
 
 		[Test]
+		public void Test_IPv6()
+		{
+			randomizer.IPv6().Should().Be("1235:8D52:7909:1235:8D52:7909:1235:8D52");
+		}
+
+		[Test]
 		public void Test_Url_With_Invalid_UrlType_Throws_Exception()
 		{
 			const UrlType urlType = (UrlType) (-1);
@@ -34,8 +41,12 @@ namespace RandomData.Tests.Categories
 		[Test]
 		public void Test_Output_Matches_Regex()
 		{
+			var ipv4 = String.Join(@"\.", Enumerable.Repeat(@"\d{1,3}", 4));
+			var ipv6 = String.Join(":", Enumerable.Repeat(@"[A-Z0-9]{4}", 8));
+	
 			randomizer = new RandomNet(new SystemRandom());
-			randomizer.IPv4().Should().MatchRegex(@"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}");
+			randomizer.IPv4().Should().MatchRegex(ipv4);
+			randomizer.IPv6().Should().MatchRegex(ipv6);
 			randomizer.Url().Should().MatchRegex(@"http:\/\/www.example.[a-z]{3}");
 			randomizer.Url(UrlType.DomainOnly).Should().MatchRegex(@"http:\/\/www.example.[a-z]{3}");
 			randomizer.Url(UrlType.DomainAndPath).Should().MatchRegex(@"http:\/\/www.example.[a-z]{3}\/[a-z]{6}");

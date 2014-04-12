@@ -28,6 +28,11 @@ namespace RandomData.Categories
 			return AlphaString(length, caseOptions);
 		}
 
+		public string Hexadecimal(int length = 8, Case caseOptions = Case.Upper)
+		{
+			return HexadecimalString(length, caseOptions);
+		}
+
 		public string Sentences(int count = 2)
 		{
 			if (count <= 0)

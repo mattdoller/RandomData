@@ -10,6 +10,7 @@ namespace RandomData.Categories
 		private const string ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		private const string NUMERIC = "0123456789";
 		private const string ALPHANUMERIC = ALPHA + NUMERIC;
+		private const string HEXADECIMAL = NUMERIC + "ABCDEF";
 
 		private readonly IRandomGenerator _random;
 
@@ -21,6 +22,11 @@ namespace RandomData.Categories
 		protected IRandomGenerator NewRandom()
 		{
 			return _random;
+		}
+
+		protected bool RandomBoolean()
+		{
+			return NewRandom().Next() % 2 == 0;
 		}
 
 		protected char RandomAlphaCharacter(Case caseOptions = Case.Upper)
@@ -51,6 +57,11 @@ namespace RandomData.Categories
 		protected string AlphanumericString(int length, Case caseOptions = Case.Upper)
 		{
 			return RandomString(length, ALPHANUMERIC.ToCharArray(), caseOptions);
+		}
+
+		protected string HexadecimalString(int length, Case caseOptions = Case.Upper)
+		{
+			return RandomString(length, HEXADECIMAL.ToCharArray(), caseOptions);
 		}
 
 		private string RandomString(int length, char[] candiates, Case caseOptions = Case.Upper)

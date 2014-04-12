@@ -45,6 +45,19 @@ namespace RandomData.Tests.Categories
 		}
 
 		[Test]
+		public void Test_Hexadecimal_Case()
+		{
+			var hex = randomized.Hexadecimal(20);
+			hex.Should().Be(hex.ToUpper());
+
+			hex = randomized.Hexadecimal(20, Case.Upper);
+			hex.Should().Be(hex.ToUpper());
+
+			hex = randomized.Hexadecimal(20, Case.Lower);
+			hex.Should().Be(hex.ToLower());
+		}
+
+		[Test]
 		public void Test_Sentences()
 		{
 			randomized.Sentences().Should().NotBeNull();
@@ -73,9 +86,11 @@ namespace RandomData.Tests.Categories
 		public void Test_Random_Strings_Are_Correct_Lengths()
 		{
 			const int expected = 50;
+
 			randomized.Numeric(expected).Should().HaveLength(expected);
 			randomized.Alpha(expected).Should().HaveLength(expected);
 			randomized.Alphanumeric(expected).Should().HaveLength(expected);
+			randomized.Hexadecimal(expected).Should().HaveLength(expected);
 		}
 
 		[Test]
@@ -86,12 +101,15 @@ namespace RandomData.Tests.Categories
 			randomized.Numeric(20).Should().MatchRegex(@"\d{20}");
 			randomized.Alpha(20).Should().MatchRegex(@"[A-Z]{20}");
 			randomized.Alphanumeric(20).Should().MatchRegex(@"\w{20}");
+			randomized.Hexadecimal(20).Should().MatchRegex(@"[A-Z0-9]{20}");
 
 			randomized.Alpha(20, Case.Lower).Should().MatchRegex(@"[a-z]{20}");
 			randomized.Alphanumeric(20, Case.Lower).Should().MatchRegex(@"\w{20}");
+			randomized.Hexadecimal(20, Case.Lower).Should().MatchRegex(@"[a-z0-9]{20}");
 
 			randomized.Alpha(20, Case.Upper).Should().MatchRegex(@"[A-Z]{20}");
 			randomized.Alphanumeric(20, Case.Upper).Should().MatchRegex(@"\w{20}");
+			randomized.Hexadecimal(20, Case.Upper).Should().MatchRegex(@"[A-Z0-9]{20}");
 		}
 	}
 }
