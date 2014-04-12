@@ -45,10 +45,8 @@ using System.Runtime.InteropServices;
   $dir = [System.IO.Path]::GetDirectoryName($file)
   if ([System.IO.Directory]::Exists($dir) -eq $false)
   {
-    Write-Host "Creating directory $dir"
     [System.IO.Directory]::CreateDirectory($dir)
   }
-  Write-Host "Generating assembly info file: $file"
   out-file -filePath $file -encoding UTF8 -inputObject $asmInfo
 }
 
@@ -78,10 +76,8 @@ function Generate-Nuspec {
   $dir = [System.IO.Path]::GetDirectoryName($file)
   if ([System.IO.Directory]::Exists($dir) -eq $false)
   {
-    Write-Host "Creating directory $dir"
     [System.IO.Directory]::CreateDirectory($dir)
   }
-  Write-Host "Generating nuspec file: $file"
   Out-File -filePath $file -encoding UTF8 -inputObject $nuspec
 }
 

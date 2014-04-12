@@ -32,7 +32,7 @@ task Clean {
 }
 
 task Init-Dependencies -depends Clean {
-  & nuget install $packages_config -OutputDirectory $packages_dir
+  & nuget install $packages_config -OutputDirectory $packages_dir -Verbosity quiet
   if ($lastExitCode -ne 0) {
     throw "Error: Failure installing packages"
   }
@@ -57,14 +57,14 @@ task Init -depends Init-Dependencies {
 }
 
 task Compile -depends Init {
-  & msbuild "$sln" "/p:OutDir=$build_dir\\" /p:Configuration=Release /m
+  & msbuild "$sln" "/p:OutDir=$build_dir\\" /p:Configuration=Release /verbosity:quiet /m /nologo /maxcpucount
   if ($lastExitCode -ne 0) {
     throw "Error: Compile failure"
   }
 }
 
 task Test -depends Compile {
-  & $nunit_console "$build_dir\$test_project_name.dll"
+  & $nunit_console /nologo "$build_dir\$test_project_name.dll"
   if ($lastExitCode -ne 0) {
     throw "Error: Test failure"
   }
@@ -80,6 +80,6 @@ task Init-PackageDependencies {
 }
 
 task Release -depends Init-PackageDependencies, Test {
-  New-Item -Path $release_dir -ItemType directory
-  & nuget pack $project_csproj -outputdirectory $release_dir
+  New-Item -Path $release_dir -ItemType directory | Out-Null
+  & nuget pack $project_csproj -outputdirectory $release_dir -Verbosity quiet
 }
