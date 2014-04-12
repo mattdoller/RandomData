@@ -1,7 +1,7 @@
 properties {
   $authors = "Matt Doller"
   $description = "A library for generating random data to help with testing"
-  $version = "0.0.1"
+  $version = "0.1.0"
 
   $project_name = "RandomData"
   $test_project_name = "$project_name.Tests"
