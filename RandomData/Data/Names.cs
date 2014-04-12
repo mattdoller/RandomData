@@ -39,17 +39,26 @@ namespace RandomData.Data
 
 		public static string[] LastNames
 		{
-			get { return _lastNames ?? (_lastNames = Strings.LastNames.SplitResource()); }
+			get
+			{
+				return _lastNames ?? (_lastNames = Strings.LastNames.SplitResource());
+			}
 		}
 
 		public static string[] IncorporationTypes
 		{
-			get { return _incorporationTypes ?? (_incorporationTypes = Strings.IncorporationTypes.SplitResource()); }
+			get
+			{
+				return _incorporationTypes ?? (_incorporationTypes = Strings.IncorporationTypes.SplitResource());
+			}
 		}
 
 		public static string[] CompanyTypes
 		{
-			get { return _companyTypes ?? (_companyTypes = Strings.CompanyTypes.SplitResource()); }
+			get
+			{
+				return _companyTypes ?? (_companyTypes = Strings.CompanyTypes.SplitResource());
+			}
 		}
 	}
 }

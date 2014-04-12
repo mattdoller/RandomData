@@ -15,12 +15,7 @@ namespace RandomData.Categories
 
 		public string Alphanumeric(int length = 16, Case caseOptions = Case.Upper)
 		{
-			var alphanumeric = AlphanumericString(length);
-			if (caseOptions == Case.Lower)
-			{
-				alphanumeric = alphanumeric.ToLower();
-			}
-			return alphanumeric;
+			return AlphanumericString(length, caseOptions);
 		}
 
 		public string Numeric(int length = 8)
@@ -30,12 +25,7 @@ namespace RandomData.Categories
 
 		public string Alpha(int length = 8, Case caseOptions = Case.Upper)
 		{
-			var alpha = AlphaString(length);
-			if (caseOptions == Case.Lower)
-			{
-				alpha = alpha.ToLower();
-			}
-			return alpha;
+			return AlphaString(length, caseOptions);
 		}
 
 		public string Sentences(int count = 2)
@@ -69,9 +59,11 @@ namespace RandomData.Categories
 
 			for (int i = 0; i < count; i++)
 			{
+				var lines = NewRandom().Next(2, 6);
+
 				paragraphs
 					.Append(breaks)
-					.Append(Sentences(4));
+					.Append(Sentences(lines));
 
 				// two lines between each each paragraph
 				breaks = Environment.NewLine + Environment.NewLine;
@@ -79,11 +71,5 @@ namespace RandomData.Categories
 
 			return paragraphs.ToString();
 		}
-	}
-
-	public enum Case
-	{
-		Upper,
-		Lower
 	}
 }

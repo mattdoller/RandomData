@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using System.Text.RegularExpressions;
 using FluentAssertions;
 using NUnit.Framework;
@@ -16,7 +15,7 @@ namespace RandomData.Tests.Categories
 		[SetUp]
 		public void SetUp()
 		{
-			randomized = new RandomText(new FakeRandom());
+			randomized = new RandomText(new SystemRandom());
 		}
 
 		[Test]
@@ -63,10 +62,8 @@ namespace RandomData.Tests.Categories
 		public void Test_Paragraph_Breaks()
 		{
 			var breaks = Environment.NewLine + Environment.NewLine;
-
 			var paragraphs = randomized.Paragraphs(5);
-
-			int count = new Regex(Regex.Escape(breaks)).Matches(paragraphs).Count;
+			var count = new Regex(Regex.Escape(breaks)).Matches(paragraphs).Count;
 
 			// five paragraphs should have four breaks in between them
 			count.Should().Be(4);

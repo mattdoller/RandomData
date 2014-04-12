@@ -23,7 +23,7 @@ namespace RandomData.Categories
 			return _random;
 		}
 
-		protected char RandomAlphaCharacter()
+		protected char RandomAlphaCharacter(Case caseOptions = Case.Upper)
 		{
 			return RandomString(1, ALPHA.ToCharArray()).First();
 		}
@@ -33,7 +33,7 @@ namespace RandomData.Categories
 			return RandomString(1, NUMERIC.ToCharArray()).First();
 		}
 
-		protected char RandomAlphanumericCharacter()
+		protected char RandomAlphanumericCharacter(Case caseOptions = Case.Upper)
 		{
 			return RandomString(1, ALPHANUMERIC.ToCharArray()).First();
 		}
@@ -43,17 +43,17 @@ namespace RandomData.Categories
 			return RandomString(length, NUMERIC.ToCharArray());
 		}
 
-		protected string AlphaString(int length)
+		protected string AlphaString(int length, Case caseOptions = Case.Upper)
 		{
-			return RandomString(length, ALPHA.ToCharArray());
+			return RandomString(length, ALPHA.ToCharArray(), caseOptions);
 		}
 
-		protected string AlphanumericString(int length)
+		protected string AlphanumericString(int length, Case caseOptions = Case.Upper)
 		{
-			return RandomString(length, ALPHANUMERIC.ToCharArray());
+			return RandomString(length, ALPHANUMERIC.ToCharArray(), caseOptions);
 		}
 
-		private string RandomString(int length, char[] candiates)
+		private string RandomString(int length, char[] candiates, Case caseOptions = Case.Upper)
 		{
 			if (length <= 0)
 			{
@@ -64,9 +64,19 @@ namespace RandomData.Categories
 			for (int i = 0; i < length; i++)
 			{
 				var random = candiates[NewRandom().Next(candiates.Length)];
+				if (caseOptions == Case.Lower)
+				{
+					random = Char.ToLower(random);
+				}
 				randomString.Append(random);
 			}
 			return randomString.ToString();
 		}
+	}
+
+	public enum Case
+	{
+		Upper,
+		Lower
 	}
 }

@@ -23,32 +23,50 @@ namespace RandomData.Data
 
 		public static string[] Cities
 		{
-			get { return _cities ?? (_cities = Strings.Cities.SplitResource()); }
+			get
+			{
+				return _cities ?? (_cities = Strings.Cities.SplitResource());
+			}
 		}
 
 		public static string[] Countries
 		{
-			get { return _countries ?? (_countries = Strings.Countries.SplitResource()); }
+			get
+			{
+				return _countries ?? (_countries = Strings.Countries.SplitResource());
+			}
 		}
 
 		public static string[] States
 		{
-			get { return _states ?? (_states = Strings.States.SplitResource()); }
+			get
+			{
+				return _states ?? (_states = Strings.States.SplitResource());
+			}
 		}
 
 		public static string[] StateAbbreviations
 		{
-			get { return _stateAbbreviations ?? (_stateAbbreviations = Strings.StateAbbreviations.SplitResource()); }
+			get
+			{
+				return _stateAbbreviations ?? (_stateAbbreviations = Strings.StateAbbreviations.SplitResource());
+			}
 		}
 
 		public static string[] StreetNames
 		{
-			get { return _streetNames ?? (_streetNames = Strings.StreetNames.SplitResource()); }
+			get
+			{
+				return _streetNames ?? (_streetNames = Strings.StreetNames.SplitResource());
+			}
 		}
 
 		public static string[] StreetTypes
 		{
-			get { return _streetTypes ?? (_streetTypes = Strings.StreetTypes.SplitResource()); }
+			get
+			{
+				return _streetTypes ?? (_streetTypes = Strings.StreetTypes.SplitResource());
+			}
 		}
 	}
 }
