@@ -39,11 +39,6 @@ namespace RandomData.Categories
 			return RandomString(1, NUMERIC.ToCharArray()).First();
 		}
 
-		protected char RandomAlphanumericCharacter(Case caseOptions = Case.Upper)
-		{
-			return RandomString(1, ALPHANUMERIC.ToCharArray()).First();
-		}
-
 		protected string NumericString(int length)
 		{
 			return RandomString(length, NUMERIC.ToCharArray());

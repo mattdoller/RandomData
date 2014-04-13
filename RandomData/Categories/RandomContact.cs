@@ -34,7 +34,7 @@ namespace RandomData.Categories
 
 		public string Email()
 		{
-			var initial = NewRandom().PickFrom('a'.To('z').ToArray());
+			var initial = RandomAlphaCharacter();
 			var lastName = NewRandom().PickFrom(Strings.LastNames.SplitResource());
 			var domain = NewRandom().PickFrom(Strings.Domains.SplitResource());
 
